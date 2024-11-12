@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Address {
 
     @Id
-    private String id; // MongoDB will automatically generate an ObjectId
+    private Long id; // MongoDB will automatically generate an ObjectId
 
     private String fullName;
     private String streetAddress;

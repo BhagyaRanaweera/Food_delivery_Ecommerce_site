@@ -1,11 +1,9 @@
 package com.example.FoodOrderingSystem.model;
 
 import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DBRef;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,14 +15,14 @@ import lombok.NoArgsConstructor;
 public class OrderItem {
 
     @Id
-    private String id; // MongoDB will generate ObjectId as a String
+    private Long id; // Use String for MongoDB's ObjectId
 
     @DBRef
     private Food food; // Reference to the Food document
 
     private int quantity;
     
-    private Long totalPrice;
+    private Double totalPrice; // Consider using Double or BigDecimal for currency values
     
     private List<String> ingredients;
 }

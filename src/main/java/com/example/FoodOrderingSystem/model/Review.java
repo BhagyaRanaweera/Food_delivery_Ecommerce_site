@@ -1,4 +1,8 @@
+
+
 package com.example.FoodOrderingSystem.model;
+
+import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -10,18 +14,25 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection = "categories")
+@Document(collection = "reviews")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Category {
+public class Review {
     
     @Id
-    private Long id; // MongoDB automatically generates ObjectId as a String
+    private Long id; // MongoDB will generate an ObjectId, stored as a String
 
-    private String name;
-    
+    @DBRef
+    private User customer; // Reference to the User document
+
     @DBRef
     @JsonIgnore
-    private Restaurant restaurant; // Reference to Restaurant document
+    private Restaurant restaurant; // Reference to the Restaurant document
+    
+    private String message;
+    
+    private double rating;
+
+    private LocalDateTime createdAt;
 }

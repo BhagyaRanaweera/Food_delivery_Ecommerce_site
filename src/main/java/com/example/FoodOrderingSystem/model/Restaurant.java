@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 public class Restaurant {
 
     @Id
-    private String id; // MongoDB will use ObjectId as a String
+    private Long id; // MongoDB will use ObjectId as a String
 
     @DBRef
     private User owner; // Reference to the User document (restaurant owner)

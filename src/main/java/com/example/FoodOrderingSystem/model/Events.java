@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class Events {
     
     @Id
-    private String id; // MongoDB automatically generates ObjectId as a String
+    private Long id; // MongoDB automatically generates ObjectId as a String
     
     private String image;
     private String startedAt;

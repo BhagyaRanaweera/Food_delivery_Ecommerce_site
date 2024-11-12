@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class IngredientsItem {
 
     @Id
-    private String id; // MongoDB automatically generates ObjectId as a String
+    private Long id; // MongoDB automatically generates ObjectId as a String
     
     private String name;
 

@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class Order {
 
     @Id
-    private String id; // MongoDB uses ObjectId, stored as String in Java
+    private Long id; // MongoDB uses ObjectId, stored as String in Java
 
     @DBRef
     private User customer; // Reference to User document

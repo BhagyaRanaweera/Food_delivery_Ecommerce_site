@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class CartItem {
     
     @Id
-    private String id;
+    private Long id;
 
     @DBRef
     private Cart cart; // Reference to Cart document

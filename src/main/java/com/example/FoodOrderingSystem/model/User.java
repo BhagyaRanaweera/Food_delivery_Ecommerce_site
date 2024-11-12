@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class User {
 
     @Id
-    private String id; // MongoDB uses String or ObjectId as the id type
+    private Long id; // MongoDB uses String or ObjectId as the id type
 
     private String fullName;
     private String email;
