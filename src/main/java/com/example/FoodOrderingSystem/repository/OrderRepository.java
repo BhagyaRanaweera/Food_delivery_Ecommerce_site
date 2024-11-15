@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-public interface OrderRepository extends MongoRepository<Order, String> {
+public interface OrderRepository extends MongoRepository<Order, Long> {
     
     // Finds orders by customer ID using MongoDB's query syntax
     @Query("{'customer.id': ?0}")
